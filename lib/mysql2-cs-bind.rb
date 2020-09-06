@@ -18,7 +18,7 @@ class Mysql2::Client
   end
 
   def self.pseudo_bind(sql, values)
-    sql = sql.dup
+    sql = +sql
 
     placeholders = []
     search_pos = 0
